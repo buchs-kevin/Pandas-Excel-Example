@@ -1,8 +1,9 @@
-from pandas.io.parsers import ExcelWriter
-from pandas.io.parsers import ExcelFile
+import pandas as pd
+from pandas import ExcelWriter
+from pandas import ExcelFile
 
-xls = ExcelFile('Pandas-Example.xlsx')
-df=xls.parse('Sheet1')  # load the sheet into the Pandas Dataframe structure
+# load the sheet into the Pandas Dataframe structure
+df = pd.read_excel('Pandas-Example.xlsx', sheetname='Sheet1')
 
 print("The list of row indicies")
 print(df.index)
